@@ -13,7 +13,7 @@
 
 <body>
 	<h1 class='col-sm-10 offset-sm-1 text-center' id='welcome'></h1>
-	<form action='http://localhost:8080/EmployeeReimbursment/login' method='GET' id='optionArea'>
+	<form action='http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/login' method='GET' id='optionArea'>
 		<button>
 			Logout
 		</button>
@@ -26,7 +26,7 @@
 			document.getElementById('displayArea').innerHTML = '';
 
 			if (sessionStorage.getItem('id') == -1) {
-				window.location.href = 'http://localhost:8080/EmployeeReimbursment/login';
+				window.location.href = 'http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/login';
 			}
 
 			employee = {

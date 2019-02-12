@@ -17,7 +17,7 @@
 
         </div>
         <br>
-        <form class='col-4 offset-sm-6 text-center' action='http://localhost:8080/EmployeeReimbursment/login' method="GET">
+        <form class='col-4 offset-sm-6 text-center' action='http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/login' method="GET">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input id="username" type="text" class="form-control" name="username" placeholder="Username">
