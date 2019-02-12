@@ -13,7 +13,7 @@ document.getElementById("test").addEventListener('click', function () {
     };
 
     
-    fetch('http://localhost:8080/EmployeeReimbursment/rest/login', {
+    fetch('http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/login', {
             method: 'post',
             body: JSON.stringify(body),
             headers: {

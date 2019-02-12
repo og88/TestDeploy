@@ -47,6 +47,7 @@ public class EmployeeDaoImplementation implements EmployeeDao {
 	}
 
 	public Employee login(String username, String password) throws SQLException {
+		log.info(username + " " + password);
 		try (Connection conn = JDBCConnectionUtil.getConnection()) {
 			String sql = "SELECT * FROM EMPLOYEE WHERE E_PASSWORD LIKE GET_USER_HASH(?,?)";
 			PreparedStatement ps = conn.prepareStatement(sql);
@@ -107,13 +108,14 @@ public class EmployeeDaoImplementation implements EmployeeDao {
 
 	@Override
 	public Employee getEmployee(int id) throws SQLException {
+		log.info("Getting all users");
 		try (Connection conn = JDBCConnectionUtil.getConnection()) {
 			String sql = "SELECT * FROM EMPLOYEE WHERE E_ID = ?";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, id);
 			ResultSet result = ps.executeQuery();
 			if (result.next()) {
-				System.out.println("found");
+				log.info("found");
 				return new Employee(result.getInt("E_ID"), result.getString("E_FIRST"), result.getString("E_LAST"),
 						result.getString("E_USERNAME"), result.getString("E_PASSWORD"), result.getInt("E_MANAGER"),
 						result.getString("EMAIL"));
