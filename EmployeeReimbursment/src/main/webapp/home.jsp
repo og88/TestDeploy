@@ -166,7 +166,7 @@
 				email: mail
 			}
 			console.log(body);
-			fetch('http://localhost:8080/EmployeeReimbursment/rest/updateEmployee', {
+			fetch('http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/updateEmployee', {
 					method: 'post',
 					body: JSON.stringify(body),
 					headers: {
@@ -230,7 +230,7 @@
 			};
 
 
-			fetch('http://localhost:8080/EmployeeReimbursment/rest/updateRequests', {
+			fetch('http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/updateRequests', {
 					method: 'post',
 					body: JSON.stringify(body),
 					headers: {
@@ -253,7 +253,7 @@
 			};
 
 
-			fetch('http://localhost:8080/EmployeeReimbursment/rest/updateRequests', {
+			fetch('http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/updateRequests', {
 					method: 'post',
 					body: JSON.stringify(body),
 					headers: {
@@ -312,7 +312,7 @@
 				}
 			}
 
-			xhr.open('GET', 'http://localhost:8080/EmployeeReimbursment/rest/viewAllUsers');
+			xhr.open('GET', 'http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/viewAllUsers');
 			xhr.send();
 		}
 		submitPage = function () {
@@ -361,7 +361,7 @@
 				userId: employee.u_id
 			};
 
-			fetch('http://localhost:8080/EmployeeReimbursment/rest/addRequest', {
+			fetch('http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/addRequest', {
 					method: 'post',
 					body: JSON.stringify(body),
 					headers: {
@@ -531,7 +531,7 @@
 			}
 
 			xhr
-				.open('GET', 'http://localhost:8080/EmployeeReimbursment/rest/viewAllRequests');
+				.open('GET', 'http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/viewAllRequests');
 			xhr.send();
 		}
 		getEmp = (number) => {
@@ -541,7 +541,7 @@
 			};
 
 
-			fetch('http://localhost:8080/EmployeeReimbursment/rest/getEmp', {
+			fetch('http://ec2-3-17-244-111.us-east-2.compute.amazonaws.com:8080/Project1/rest/getEmp', {
 					method: 'post',
 					body: JSON.stringify(body),
 					headers: {
